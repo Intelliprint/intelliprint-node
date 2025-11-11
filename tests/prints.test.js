@@ -60,41 +60,41 @@ test('Testing CRUD methods (live)', async () => {
   expect(print.sheets).toBe(1)
 
 
-  // //Attempt updating the print job.
-  // const updated = await ip.prints.update(print.id, {
-  //   reference: 'Updated Print',
-  // })
-  // expect(updated).toBeDefined()
-  // expect(updated.object).toBe('print')
-  // expect(updated.id).toBe(print.id)
-  // expect(updated.reference).toBe('Updated Print')
+  //Attempt updating the print job.
+  const updated = await ip.prints.update(print.id, {
+    reference: 'Updated Print',
+  })
+  expect(updated).toBeDefined()
+  expect(updated.object).toBe('print')
+  expect(updated.id).toBe(print.id)
+  expect(updated.reference).toBe('Updated Print')
 
 
-  // //Attempt retrieving it again.
-  // const retrieved = await ip.prints.retrieve(print.id)
-  // expect(retrieved).toBeDefined()
-  // expect(retrieved.object).toBe('print')
-  // expect(retrieved.id).toBe(print.id)
-  // expect(retrieved.reference).toBe('Updated Print') //Ensure the change was persisted (More of an API test).
+  //Attempt retrieving it again.
+  const retrieved = await ip.prints.retrieve(print.id)
+  expect(retrieved).toBeDefined()
+  expect(retrieved.object).toBe('print')
+  expect(retrieved.id).toBe(print.id)
+  expect(retrieved.reference).toBe('Updated Print') //Ensure the change was persisted (More of an API test).
 
 
-  // //Attempt listing print jobs.
-  // const list = await ip.prints.list({limit: 1, sort_field: 'created', sort_order: 'desc'})
-  // expect(list).toBeDefined()
-  // expect(list.object).toBe('list')
-  // expect(list.data).toBeDefined()
-  // expect(list.data.length).toBe(1)
-  // expect(list.data[0].object).toBe('print')
-  // expect(list.data[0].id).toBe(print.id)
-  // expect(list.has_more).toBeDefined()
+  //Attempt listing print jobs.
+  const list = await ip.prints.list({limit: 1, sort_field: 'created', sort_order: 'desc'})
+  expect(list).toBeDefined()
+  expect(list.object).toBe('list')
+  expect(list.data).toBeDefined()
+  expect(list.data.length).toBe(1)
+  expect(list.data[0].object).toBe('print')
+  expect(list.data[0].id).toBe(print.id)
+  expect(list.has_more).toBeDefined()
 
 
-  // //Attempt deleting the print job.
-  // const deleted = await ip.prints.delete(print.id)
-  // expect(deleted).toBeDefined()
-  // expect(deleted.object).toBe('print')
-  // expect(deleted.id).toBe(print.id)
-  // expect(deleted.deleted).toBe(true)
+  //Attempt deleting the print job.
+  const deleted = await ip.prints.delete(print.id)
+  expect(deleted).toBeDefined()
+  expect(deleted.object).toBe('print')
+  expect(deleted.id).toBe(print.id)
+  expect(deleted.deleted).toBe(true)
 }, 60 * 1000)
 
 
@@ -126,7 +126,6 @@ test('Testing direct file upload', async () => {
   expect(print).toBeDefined()
   expect(print.id).toBeDefined()
   expect(print.object).toBe('print')
-  //expect(print.letters.length).toBe(1)
   expect(print.type).toBe('letter')
   expect(print.testmode).toBe(true)
   expect(print.confirmed).toBe(true)
