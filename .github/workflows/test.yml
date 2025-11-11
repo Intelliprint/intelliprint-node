@@ -20,3 +20,5 @@ jobs:
         run: bun install
       - name: Run tests
         run: bun test --coverage
+        env:
+          INTELLIPRINT_API_KEY: ${{ secrets.INTELLIPRINT_API_KEY }}
