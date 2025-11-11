@@ -324,8 +324,7 @@ const printJob = await ip.prints.create({
 // Retrieve a print job to check its status
 const printJob = await ip.prints.retrieve('print-job-id')
 
-console.log('Status:', printJob.status)
-console.log('Letters:', printJob.letters)
+console.log('Letter statuses:', printJob.letters.map(letter => letter.status))
 ```
 
 ## Requirements
