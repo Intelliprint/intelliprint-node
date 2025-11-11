@@ -1,0 +1,29 @@
+{
+  "name": "intelliprint",
+  "description": "Send mail as easy as sending email.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "intelliprint",
+    "letter",
+    "postcard",
+    "hybrid mail",
+    "api"
+  ],
+  "homepage": "https://github.com/Intelliprint/intelliprint-node",
+  "author": "Intelliprint <hello@intelliprint.net> (https://intelliprint.net)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Intelliprint/intelliprint-node.git"
+  },
+  "bugs": "https://github.com/Intelliprint/intelliprint-node/issues",
+  "main": "intelliprint.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "axios": "^1.13.1",
+    "axios-retry": "^4.5.0"
+  }
+}
