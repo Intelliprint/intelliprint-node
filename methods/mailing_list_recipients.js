@@ -23,7 +23,7 @@ export default class MailingListRecipients {
      * @param {object} recipient.address - The address object of the recipient.
      * @param {string} recipient.address.name - The name of the recipient.
      * @param {string} recipient.address.line - The complete address line for the recipient.
-     * @param {string} recipient.address.postal_code - The postal code of the address.
+     * @param {string} recipient.address.postcode - The postal code of the address.
      * @param {string} recipient.address.country - The country of the address (Example: 'GB').
      * @param {object} recipient.variables - Any dynamic fields to use for the recipient (Example: {name_full: 'John C. Doe'}).
      * @returns {Promise<Object>} The response from the Intelliprint API.
@@ -75,7 +75,7 @@ export default class MailingListRecipients {
      * @param {object} recipient.address - The address object of the recipient.
      * @param {string} recipient.address.name - The name of the recipient.
      * @param {string} recipient.address.line - The complete address line for the recipient.
-     * @param {string} recipient.address.postal_code - The postal code of the address.
+     * @param {string} recipient.address.postcode - The postal code of the address.
      * @param {string} recipient.address.country - The country of the address (Example: 'GB').
      * @param {object} recipient.variables - Any dynamic fields to use for the recipient (Example: {name_full: 'John C. Doe'}).
      * @returns {Promise<Object>} The response from the Intelliprint API.

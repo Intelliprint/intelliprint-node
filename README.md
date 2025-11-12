@@ -32,7 +32,7 @@ const printJob = await ip.prints.create({
     address: {
       name: 'John Doe',
       line: '123 Main Street, Anytown, Anyplace',
-      postal_code: 'AB1 2CD',
+      postcode: 'AB1 2CD',
       country: 'GB'
     }
   }],
@@ -74,7 +74,7 @@ const printJob = await ip.prints.create({
     address: {
       name: 'Jane Smith',
       line: '456 Oak Avenue, Apt 2B, Manchester',
-      postal_code: 'M1 1AA',
+      postcode: 'M1 1AA',
       country: 'GB'
     },
     variables: {
@@ -110,7 +110,7 @@ const postcard = await ip.prints.create({
     address: {
       name: 'Bob Johnson',
       line: '789 Pine Road, Birmingham',
-      postal_code: 'B1 1AA',
+      postcode: 'B1 1AA',
       country: 'GB'
     }
   }],
@@ -296,9 +296,9 @@ const printJob = await ip.prints.create({
   type: 'letter',
   file: 'https://example.com/letter.pdf',
   recipients: [
-    { address: { name: 'Person 1', line: 'Address 1', postal_code: 'POST', country: 'GB' } },
-    { address: { name: 'Person 2', line: 'Address 2', postal_code: 'POST', country: 'GB' } },
-    { address: { name: 'Person 3', line: 'Address 3', postal_code: 'POST', country: 'GB' } }
+    { address: { name: 'Person 1', line: 'Address 1', postcode: 'POST', country: 'GB' } },
+    { address: { name: 'Person 2', line: 'Address 2', postcode: 'POST', country: 'GB' } },
+    { address: { name: 'Person 3', line: 'Address 3', postcode: 'POST', country: 'GB' } }
   ],
   confirmed: true
 })
